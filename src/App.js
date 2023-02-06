@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Courses from "./components/Courses";
 import Bootcamp from "./components/Bootcamp";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 /* 
 - Header
@@ -23,10 +24,11 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <Header />
-      <Courses />
+      {/* <Header /> */}
+      <Hero />
+      {/* <Courses />
       <Bootcamp />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
