@@ -28,3 +28,116 @@ body {
   height: 44px;
   width: 44px;
 }
+
+/* courses section */
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffd7b1;
+  padding: 16px;
+  border-radius: 8px;
+}
+.card img {
+  width: 280px;
+  height: 280px;
+}
+.join-btn {
+  width: 280px;
+  height: 48px;
+  background-color: #161e3c;
+  color: white;
+  border-radius: 8px;
+}
+.join-btn img {
+  height: 24px;
+  width: 24px;
+}
+
+/* Bootcamp section */
+.active {
+  background-color: #fb9b43;
+}
+.inactive {
+  background-color: #ffd7b1;
+}
+.title {
+  padding: 16px;
+  max-width: fit-content;
+}
+
+.titles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.desc {
+  padding: 60px;
+  background-color: #ffd7b1;
+  min-width: fit-content;
+  min-height: fit-content;
+  max-width: fit-content;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 71px;
+  margin-top: 24px;
+}
+.desc-p1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 563px;
+}
+.desc-img {
+  width: 423px;
+  height: 328px;
+}
+.desc-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer part */
+
+.footer-container {
+  background-color: #c1cfff;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-p1 img {
+  width: 187px;
+  height: 28px;
+}
+.footer-p2 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+@media only screen and (max-width: 500px) {
+  /* courses section */
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffd7b1;
+    padding: 16px;
+    border-radius: 8px;
+    max-width: fit-content;
+  }
+}

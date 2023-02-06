@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Courses from "./components/Courses";
+import Bootcamp from "./components/Bootcamp";
+import Footer from "./components/Footer";
 
 /* 
 - Header
@@ -23,6 +25,8 @@ function App() {
     <>
       <Header />
       <Courses />
+      <Bootcamp />
+      <Footer />
     </>
   );
 }
