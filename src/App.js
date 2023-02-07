@@ -24,11 +24,11 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Hero />
       <Courses />
       <Bootcamp />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

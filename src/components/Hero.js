@@ -1,5 +1,5 @@
 import React from "react";
-import HeroMan from "../assets/hero-man.png";
+import HeroMan from "../assets/hero-man-1.png";
 import BlackRightArrow from "../assets/black-right-arrow.png";
 import PointerIcon from "../assets/pointer-icon.png";
 
@@ -23,7 +23,7 @@ const Hero = () => {
     <>
       <div className="p-[20px] flex flex-col bg-[#161e3c] text-[#fff] pt-[80px] pb-[60px] ">
         <div className="flex flex-col sm:flex  items-center sm:flex-row  sm:justify-center sm:gap-[48px]">
-          <img className="w-[320px]  sm:h-[326px] sm:w-[460px]" src={HeroMan} />
+          <img className="w-[320px]  sm:h-[382px] sm:w-[461px]" src={HeroMan} />
 
           <div className="text-[#fff] self-center">
             <h1 className="text-[28px] pt-[20px] sm:text-[44px] font-[700]">
