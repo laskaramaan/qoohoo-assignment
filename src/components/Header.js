@@ -6,8 +6,8 @@ export default function Header() {
 
   return (
     <div className="flex items-center justify-center sm:gap-[483px] gap-[133px] py-[16px] bg-[#161E3C]">
-      <div className="flex flex-row text-[16px] font-[700] text-[#fff] gap-[12px] items-center">
-        <img className="h-[44px] w-[44px]" src={ProfileImage} />
+      <div className="flex flex-row cursor-pointer text-[16px] font-[700] text-[#fff] gap-[12px] items-center">
+        <img className="h-[44px] w-[44px] cursor-pointer" src={ProfileImage} />
         <p>Annette Black</p>{" "}
       </div>
       <nav>
@@ -41,14 +41,16 @@ export default function Header() {
               </svg>
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b cursor-pointer border-gray-400 my-8 uppercase">
                 Programs
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b cursor-pointer border-gray-400 my-8 uppercase">
                 Retreats
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">Blogs</li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b cursor-pointer border-gray-400 my-8 uppercase">
+                Blogs
+              </li>
+              <li className="border-b cursor-pointer border-gray-400 my-8 uppercase">
                 Contact us{" "}
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">Login</li>
@@ -56,13 +58,13 @@ export default function Header() {
           </div>
         </section>
 
-        <div className="DESKTOP-MENU hidden lg:flex flex-row gap-[32px] text-[16px] font-[700] text-[#fff] list-none items-center">
-          <li>Programs</li>
-          <li>Retreats</li>
-          <li>Blogs</li>
-          <li>Contact us </li>
+        <div className="DESKTOP-MENU hidden lg:flex  flex-row gap-[32px] text-[16px] font-[700] text-[#fff] list-none items-center">
+          <li className="cursor-pointer">Programs</li>
+          <li className="cursor-pointer">Retreats</li>
+          <li className="cursor-pointer">Blogs</li>
+          <li className="cursor-pointer">Contact us </li>
 
-          <div className="border-solid border-2 border-[#fff] rounded-[100px] p-[10px]">
+          <div className="border-solid border-2 border-[#fff] cursor-pointer rounded-[100px] p-[10px]">
             Login
           </div>
         </div>
