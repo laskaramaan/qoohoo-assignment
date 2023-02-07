@@ -26,9 +26,9 @@ function App() {
     <>
       {/* <Header /> */}
       <Hero />
-      {/* <Courses />
+      <Courses />
       <Bootcamp />
-      <Footer /> */}
+      {/* <Footer /> */}
     </>
   );
 }
