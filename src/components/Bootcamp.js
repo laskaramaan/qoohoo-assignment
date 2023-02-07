@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import RightArrow from "../assets/arrow-right-icon.png";
 import { Bootcamp_data } from "../config";
 
 const Bootcamp = () => {
   const [activeTitle, setActive] = useState(Bootcamp_data[0].title);
+
+  const myRef = useRef();
+  const [myElementIsVisible, setMyElementIsVisible] = useState();
+  console.log("myElementIsVisible", myElementIsVisible);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(myRef.current);
+  }, []);
   return (
     <>
-      <div className="flex flex-col py-[60px] justify-center items-center">
+      <div
+        ref={myRef}
+        className={`${
+          myElementIsVisible
+            ? "animation-1 flex flex-col py-[60px] justify-center items-center"
+            : "flex flex-col py-[60px] justify-center items-center"
+        }`}
+      >
         <h1 className="text-[40px] font-[800] leading-[60px] pb-[36px]">
           Bootcamps
         </h1>
@@ -48,7 +66,7 @@ const Bootcamp = () => {
                       </div>
                     </div>
                     <div>
-                      <img className="w-[423px] h-[328px] img" src={d.img} />
+                      <img className="w-[423px] h-[328px]" src={d.img} />
                     </div>
                   </div>
                 )}
@@ -56,21 +74,17 @@ const Bootcamp = () => {
             );
           })}
         </div>
-        <style>{`
-      .img{
-        animation-name: flo;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        position: relative;
-        
-        
-      }
-      @keyframes flo{
-        50%{
-          transform: translateY(30px);
+        <style>
+          {`
+        .animation-1{
+        animation: fadeIn 4s;
         }
+        @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
       }
-    `}</style>
+    `}
+        </style>
       </div>
     </>
   );

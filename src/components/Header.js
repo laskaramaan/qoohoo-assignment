@@ -16,9 +16,9 @@ export default function Header() {
             className="HAMBURGER-ICON space-y-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8  bg-gray-600"></span>
+            <span className="block h-0.5 w-8  bg-gray-600"></span>
+            <span className="block h-0.5 w-8  bg-gray-600"></span>
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>

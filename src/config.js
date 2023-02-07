@@ -48,7 +48,7 @@ export const Bootcamp_data = [
     head: "Amet minim mollit ",
     desc: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
 
-    img: BootcampImg,
+    img: card1,
     joinBtn: true,
   },
   {
@@ -56,7 +56,7 @@ export const Bootcamp_data = [
     head: "Amet minim mollit ",
     desc: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
 
-    img: BootcampImg,
+    img: card3,
     joinBtn: true,
   },
 ];

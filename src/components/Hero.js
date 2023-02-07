@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import HeroMan from "../assets/hero-man-1.png";
 import BlackRightArrow from "../assets/black-right-arrow.png";
 import { pointers } from "../config";
 
 const Hero = () => {
+  const myRef = useRef();
+  const [myElementIsVisible, setMyElementIsVisible] = useState();
+  console.log("myElementIsVisible", myElementIsVisible);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(myRef.current);
+  }, []);
   return (
     <>
-      <div className="p-[20px] flex flex-col bg-[#161e3c] text-[#fff] pt-[80px] pb-[60px] ">
-        <div className="flex flex-col sm:flex  items-center sm:flex-row  sm:justify-center sm:gap-[48px]">
+      <div
+        ref={myRef}
+        className={`${
+          myElementIsVisible
+            ? "animation-1 p-[20px] flex flex-col bg-[#161e3c] text-[#fff] pt-[80px] pb-[60px]"
+            : "p-[20px] flex flex-col bg-[#161e3c] text-[#fff] pt-[80px] pb-[60px]"
+        }`}
+      >
+        <div className=" flex flex-col sm:flex  items-center sm:flex-row  sm:justify-center sm:gap-[48px]">
           <img className="w-[320px]  sm:h-[382px] sm:w-[461px]" src={HeroMan} />
 
           <div className="text-[#fff] self-center">
@@ -47,6 +64,17 @@ const Hero = () => {
             );
           })}
         </div>
+        <style>
+          {`
+        .animation-1{
+          animation: fadeIn 4s;
+        }
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        `}
+        </style>
       </div>
     </>
   );

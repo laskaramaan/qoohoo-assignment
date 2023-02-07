@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ProfileImage from "../assets/profile-image.png";
 import RightArrow from "../assets/arrow-right-icon.png";
 
 import { CoursesCards } from "../config";
 
 const Courses = () => {
+  const myRef = useRef();
+  const [myElementIsVisible, setMyElementIsVisible] = useState();
+  console.log("myElementIsVisible", myElementIsVisible);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(myRef.current);
+  }, []);
   return (
     <>
-      <div className="flex flex-col pt-[60px] pb-[60px] bg-[#C1CFFF] justify-center items-center self-center gap-[36px]">
+      <div
+        ref={myRef}
+        className={`${
+          myElementIsVisible
+            ? "animation-1 flex flex-col pt-[60px] pb-[60px] bg-[#C1CFFF] justify-center items-center self-center gap-[36px]"
+            : "flex flex-col pt-[60px] pb-[60px] bg-[#C1CFFF] justify-center items-center self-center gap-[36px]"
+        }  `}
+      >
         <h1 className="font-[800] sm:text-[40px] text-[28px]">
           Checkout my courses
         </h1>
@@ -34,6 +51,17 @@ const Courses = () => {
             );
           })}
         </div>
+        <style>
+          {`
+        .animation-1{
+          animation: fadeIn 4s;
+        }
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        `}
+        </style>
       </div>
     </>
   );
