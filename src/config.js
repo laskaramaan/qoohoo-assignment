@@ -39,7 +39,7 @@ export const Bootcamp_data = [
   {
     title: "3 Months",
     head: "Amet minim mollit ",
-    desc: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
+    desc: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor.  ",
     img: BootcampImg,
     joinBtn: true,
   },
@@ -54,7 +54,7 @@ export const Bootcamp_data = [
   {
     title: "12 Months",
     head: "Amet minim mollit ",
-    desc: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
+    desc: "Nulla Lorem mollit cupidatat irure. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
 
     img: card3,
     joinBtn: true,
