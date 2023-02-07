@@ -1,22 +1,7 @@
 import React from "react";
 import HeroMan from "../assets/hero-man-1.png";
 import BlackRightArrow from "../assets/black-right-arrow.png";
-import PointerIcon from "../assets/pointer-icon.png";
-
-const pointers = [
-  {
-    icon: PointerIcon,
-    oneLiner: "500+ happy customers ",
-  },
-  {
-    icon: PointerIcon,
-    oneLiner: "Learn as you go ",
-  },
-  {
-    icon: PointerIcon,
-    oneLiner: "Self-paced learning",
-  },
-];
+import { pointers } from "./config";
 
 const Hero = () => {
   return (
@@ -33,9 +18,15 @@ const Hero = () => {
             <p className="font-[400] text-[24px] mt-[24px]">
               Start with us today
             </p>
-            <button className="flex justify-center p-[16px] bg-[#fb9b43] font-[700] text-[24px] align-middle text-[black] rounded-md mt-[24px]">
+            <button className="flex justify-center py-[16px] px-[48px] bg-[#fb9b43] font-[700] text-[24px] align-middle text-[black] rounded-md mt-[24px] gap-[13px]">
               View all courses
-              <img className="h-[24px] w-[24px]" src={BlackRightArrow} />
+              <span>
+                {" "}
+                <img
+                  className="h-[24px] w-[24px] relative top-[6px]"
+                  src={BlackRightArrow}
+                />
+              </span>
             </button>
           </div>
         </div>

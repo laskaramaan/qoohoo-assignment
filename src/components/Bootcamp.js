@@ -1,31 +1,7 @@
 import React, { useState } from "react";
-import BootcampImg from "../assets/bootcamp_img.png";
+
 import RightArrow from "../assets/arrow-right-icon.png";
-const Bootcamp_data = [
-  {
-    title: "3 Months",
-    head: "Amet minim mollit ",
-    desc: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
-    img: BootcampImg,
-    joinBtn: true,
-  },
-  {
-    title: "6 Months",
-    head: "Amet minim mollit ",
-    desc: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
-
-    img: BootcampImg,
-    joinBtn: true,
-  },
-  {
-    title: "12 Months",
-    head: "Amet minim mollit ",
-    desc: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
-
-    img: BootcampImg,
-    joinBtn: true,
-  },
-];
+import { Bootcamp_data } from "./config";
 
 const Bootcamp = () => {
   const [activeTitle, setActive] = useState(Bootcamp_data[0].title);
