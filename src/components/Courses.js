@@ -2,7 +2,7 @@ import React from "react";
 import ProfileImage from "../assets/profile-image.png";
 import RightArrow from "../assets/arrow-right-icon.png";
 
-import { CoursesCards } from "./config";
+import { CoursesCards } from "../config";
 
 const Courses = () => {
   return (
@@ -15,7 +15,7 @@ const Courses = () => {
           {CoursesCards.map((cards) => {
             return (
               <>
-                <div className="bg-[#FFD7B1] p-4 rounded-md">
+                <div className="bg-[#FFD7B1] hover:bg-[#f2b983] p-4 rounded-md">
                   <img className="h-[280px]" src={cards.image} />
                   <h2 className="font-[800] text-[24px] leading-[36px] py-[16px] ">
                     {cards.oneLiner}

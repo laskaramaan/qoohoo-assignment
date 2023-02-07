@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import RightArrow from "../assets/arrow-right-icon.png";
-import { Bootcamp_data } from "./config";
+import { Bootcamp_data } from "../config";
 
 const Bootcamp = () => {
   const [activeTitle, setActive] = useState(Bootcamp_data[0].title);
@@ -14,7 +14,7 @@ const Bootcamp = () => {
         <div className="flex flex-row sm:gap-[36px] gap-[10px] mb-[24px]">
           {Bootcamp_data.map((t) => {
             return (
-              <div
+              <button
                 key={t.title}
                 className={`${
                   activeTitle === t.title ? "bg-[#FB9B43]" : "bg-[#FFD7B1]"
@@ -24,7 +24,7 @@ const Bootcamp = () => {
                 }}
               >
                 {t.title}
-              </div>
+              </button>
             );
           })}
         </div>
@@ -33,7 +33,7 @@ const Bootcamp = () => {
             return (
               <>
                 {d.title === activeTitle && (
-                  <div className="flex sm:flex-row flex-col-reverse sm:p-[60px] p-[20px] bg-[#FFD7B1] rounded-lg">
+                  <div className="flex sm:flex-row flex-col-reverse sm:p-[60px] p-[20px] bg-[#FFD7B1] rounded-lg sm:gap-[71px]">
                     <div className="flex flex-col pt-[14px] ">
                       <h1 className="font-[800] sm:text-[44px] text-[28px] leading-[52px] pb-[16px] ">
                         {d.head}
@@ -48,7 +48,7 @@ const Bootcamp = () => {
                       </div>
                     </div>
                     <div>
-                      <img className="w-[423px] h-[328px]" src={d.img} />
+                      <img className="w-[423px] h-[328px] img" src={d.img} />
                     </div>
                   </div>
                 )}
@@ -56,6 +56,21 @@ const Bootcamp = () => {
             );
           })}
         </div>
+        <style>{`
+      .img{
+        animation-name: flo;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        position: relative;
+        
+        
+      }
+      @keyframes flo{
+        50%{
+          transform: translateY(30px);
+        }
+      }
+    `}</style>
       </div>
     </>
   );

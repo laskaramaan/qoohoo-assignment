@@ -1,7 +1,7 @@
 import React from "react";
 import HeroMan from "../assets/hero-man-1.png";
 import BlackRightArrow from "../assets/black-right-arrow.png";
-import { pointers } from "./config";
+import { pointers } from "../config";
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
           <img className="w-[320px]  sm:h-[382px] sm:w-[461px]" src={HeroMan} />
 
           <div className="text-[#fff] self-center">
-            <h1 className="text-[28px] pt-[20px] sm:text-[44px] font-[700]">
+            <h1 className="text-[28px] pt-[20px] sm:pt-[0px] sm:text-[44px] font-[700] sm:w-[421px]">
               <span className="text-[#fb9b42] font-[900]">Get ready </span> to
               grow with us ⭐️{" "}
             </h1>

@@ -1,8 +1,8 @@
-import PointerIcon from "../assets/pointer-icon.png";
-import card1 from "../assets/card1.png";
-import card2 from "../assets/card2.png";
-import card3 from "../assets/card3.png";
-import BootcampImg from "../assets/bootcamp_img.png";
+import PointerIcon from "./assets/pointer-icon.png";
+import card1 from "./assets/card1.png";
+import card2 from "./assets/card2.png";
+import card3 from "./assets/card3.png";
+import BootcampImg from "./assets/bootcamp_img.png";
 export const pointers = [
   {
     icon: PointerIcon,
