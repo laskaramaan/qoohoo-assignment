@@ -31,16 +31,18 @@ const Bootcamp = () => {
   const [activeTitle, setActive] = useState(Bootcamp_data[0].title);
   return (
     <>
-      <div className="">
-        <h1>Bootcamps</h1>
-        <div className="titles-container">
+      <div className="flex flex-col py-[60px] justify-center items-center">
+        <h1 className="text-[40px] font-[800] leading-[60px] pb-[36px]">
+          Bootcamps
+        </h1>
+        <div className="flex flex-row gap-[36px] mb-[24px]">
           {Bootcamp_data.map((t) => {
             return (
               <div
                 key={t.title}
                 className={`${
-                  activeTitle === t.title ? "active" : "inactive"
-                } title `}
+                  activeTitle === t.title ? "bg-[#FB9B43]" : "bg-[#FFD7B1]"
+                } py-[16px] px-[68px] text-[28px] font-[700] rounded-md`}
                 onClick={() => {
                   setActive(t.title);
                 }}
@@ -50,34 +52,27 @@ const Bootcamp = () => {
             );
           })}
         </div>
-        <div className="desc-container">
+        <div>
           {Bootcamp_data.map((d) => {
             return (
               <>
-                {/* {d.title === activeTitle && d.desc} */}
                 {d.title === activeTitle && (
-                  // <div>
-                  //   {d.desc} <img className="desc-img" src={d.img} />
-                  //   <button className="join-btn">
-                  //     Join Now{" "}
-                  //     <span>
-                  //       <img src={RightArrow} />
-                  //     </span>
-                  //   </button>
-                  // </div>
-                  <div className="desc">
-                    <div className="desc-p1">
-                      <h1>{d.head}</h1>
-                      <p>{d.desc}</p>
-                      <button className="join-btn">
-                        {" "}
-                        <span>
-                          <img src={RightArrow} />{" "}
-                        </span>{" "}
-                      </button>
+                  <div className="flex flex-row p-[60px] bg-[#FFD7B1] rounded-lg">
+                    <div className="flex flex-col pt-[14px]">
+                      <h1 className="font-[800] text-[44px] leading-[52px] pb-[16px]">
+                        {d.head}
+                      </h1>
+                      <p className="font-[600] text-[24px] leading-[36px] pb-[28px] max-w-[563px]">
+                        {d.desc}
+                      </p>
+                      <div className="max-w-[280px]">
+                        <button className="flex flex-row py-[12px] gap-[13px] rounded-md bg-[#161E3C] justify-center w-[-webkit-fill-available] text-[#fff] text-[17px] font-[700]">
+                          Join Now <img src={RightArrow} />
+                        </button>
+                      </div>
                     </div>
-                    <div className="desc-p2">
-                      <img className="desc-img" src={d.img} />
+                    <div>
+                      <img className="w-[423px] h-[328px]" src={d.img} />
                     </div>
                   </div>
                 )}
