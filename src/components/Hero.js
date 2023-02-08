@@ -24,7 +24,7 @@ const Hero = () => {
             : "p-[20px] flex flex-col bg-[#161e3c] text-[#fff] pt-[80px] pb-[60px]"
         }`}
       >
-        <div className=" flex flex-col sm:flex  items-center sm:flex-row  sm:justify-center sm:gap-[48px]">
+        <div className=" flex  items-center flex-row flex-wrap sm:justify-center sm:gap-[48px]">
           <img className="w-[320px]  sm:h-[382px] sm:w-[461px]" src={HeroMan} />
 
           <div className="text-[#fff] self-center">
@@ -47,7 +47,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-row justify-center self-center mt-[40px] gap-[23px]">
+        <div className="flex flex-wrap flex-row justify-center self-center mt-[40px] gap-[23px]">
           {pointers.map((pointer) => {
             return (
               <>

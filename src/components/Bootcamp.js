@@ -29,7 +29,7 @@ const Bootcamp = () => {
         <h1 className="text-[40px] font-[800] leading-[60px] pb-[36px]">
           Bootcamps
         </h1>
-        <div className="flex flex-row sm:gap-[36px] gap-[10px] mb-[24px]">
+        <div className="flex flex-wrap justify-center flex-row sm:gap-[36px] gap-[10px] mb-[24px]">
           {Bootcamp_data.map((t) => {
             return (
               <button
@@ -51,7 +51,7 @@ const Bootcamp = () => {
             return (
               <>
                 {d.title === activeTitle && (
-                  <div className="flex sm:flex-row flex-col-reverse sm:p-[60px] p-[20px] bg-[#FFD7B1] rounded-lg sm:gap-[71px]">
+                  <div className="flex sm:flex-row flex-wrap justify-center  sm:p-[60px] p-[20px]  bg-[#FFD7B1] rounded-lg sm:gap-[71px]">
                     <div className="flex flex-col pt-[14px] ">
                       <h1 className="font-[800] sm:text-[44px] text-[28px] leading-[52px] pb-[16px] ">
                         {d.head}

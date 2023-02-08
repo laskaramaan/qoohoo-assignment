@@ -21,14 +21,14 @@ const Courses = () => {
         ref={myRef}
         className={`${
           myElementIsVisible
-            ? "animation-1 flex flex-col pt-[60px] pb-[60px] bg-[#C1CFFF] justify-center items-center self-center gap-[36px]"
-            : "flex flex-col pt-[60px] pb-[60px] bg-[#C1CFFF] justify-center items-center self-center gap-[36px]"
+            ? "animation-1 flex flex-col flex-wrap pt-[60px] pb-[60px] bg-[#C1CFFF] justify-center items-center self-center gap-[36px]"
+            : "flex flex-col flex-wrap  pt-[60px] pb-[60px] bg-[#C1CFFF] justify-center items-center self-center gap-[36px]"
         }  `}
       >
         <h1 className="font-[800] sm:text-[40px] text-[28px]">
           Checkout my courses
         </h1>
-        <div className="flex sm:flex-row flex-col gap-[36px] ">
+        <div className="flex sm:flex-row flex-wrap justify-center flex-col gap-[36px] ">
           {CoursesCards.map((cards) => {
             return (
               <>
